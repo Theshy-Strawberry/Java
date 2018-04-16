@@ -28,7 +28,7 @@ public class _Junit_ProxyMain {
 	         
 	    proxyArithmeticCalculator.jia(9,8);
 	   
-	    //write proxyArithmeticCalculator class binary data to file   
+	     
 	    createProxyClassFile();   
 	  }   
 	     
