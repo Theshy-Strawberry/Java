@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>atongmuOL</display-name>
+  <welcome-file-list>
+    <welcome-file>testEXT.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.jdbc.driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>debuf</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcUrl</param-name>
+    <param-value>jdbc:mysql:///test</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>testServlet</servlet-name>
+    <servlet-class>servlet.TestServletMain</servlet-class>
+    <init-param>
+      <param-name>user</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>pwd</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+</web-app>
